@@ -9,9 +9,11 @@ interface Props {
 }
 
 const GenreList = ({ genres, selectedGenre, onSelectGenre}: Props) => {
+  const sortedGenres = [...genres].sort((a, b) => a.name.localeCompare(b.name))
+
   return (
     <List>
-      {genres.map((genre) => (
+      {sortedGenres.map((genre) => (
         <ListItem paddingY="5px" key={genre.id}>
           <HStack>
             <Image
