@@ -14,9 +14,9 @@ const GenreListView = ({ selectedGenre, setSelectedGenre }: Props) => {
 
   return (
     <>
-      {/* {error && null}
+      {/* {error && null} */}
       <Heading marginBottom={3} fontSize='2xl'>Genres</Heading>
-      {isLoading &&
+      {/* {isLoading &&
         skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)} */}
       <GenreList
         onSelectGenre={(genre) => setSelectedGenre(genre)}

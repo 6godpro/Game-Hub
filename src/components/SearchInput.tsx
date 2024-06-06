@@ -19,7 +19,7 @@ const SearchInput = ({ onSearch }: Props) => {
         }
       }}
     >
-      <InputGroup margin='auto' width='70%'>
+      <InputGroup margin='auto' width='80%'>
         <InputLeftElement children={<BsSearch />} />
         <Input
           ref={ref}
