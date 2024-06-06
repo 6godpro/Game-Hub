@@ -1,3 +1,4 @@
+import { Heading } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
 import GenreList from "./GenreList";
 import GenreListSkeleton from "./GenreListSkeleton";
@@ -14,6 +15,7 @@ const GenreListView = ({ selectedGenre, setSelectedGenre }: Props) => {
   return (
     <>
       {error && null}
+      <Heading marginBottom={3} fontSize='2xl'>Genres</Heading>
       {isLoading &&
         skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)}
       <GenreList
