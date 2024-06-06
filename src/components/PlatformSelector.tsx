@@ -16,9 +16,12 @@ const PlatformSelector = ({ selectedPlatform, onSelectPlatform }: Props) => {
     // Dropdown Menu
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-        {selectedPlatform ? selectedPlatform.name : 'Platforms'}
+        {selectedPlatform ? selectedPlatform.name : "Platforms"}
       </MenuButton>
-      <MenuList>
+      <MenuList
+        maxH={{ base: "300px", md: "1000px" }}
+        overflowY={{ base: "auto", md: "hidden" }}
+      >
         {data.map((platform) => (
           <MenuItem
             key={platform.id}
