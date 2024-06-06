@@ -9,15 +9,15 @@ interface Props {
 }
 
 const GenreListView = ({ selectedGenre, setSelectedGenre }: Props) => {
-  const { data, error, isLoading } = useGenres();
-  const skeletons = [1, 2, 3, 4, 5, 6];
+  const { data } = useGenres();
+  // const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (
     <>
-      {error && null}
+      {/* {error && null}
       <Heading marginBottom={3} fontSize='2xl'>Genres</Heading>
       {isLoading &&
-        skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)}
+        skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)} */}
       <GenreList
         onSelectGenre={(genre) => setSelectedGenre(genre)}
         genres={data}

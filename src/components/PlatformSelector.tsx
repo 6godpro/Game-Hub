@@ -8,9 +8,7 @@ interface Props {
 }
 
 const PlatformSelector = ({ selectedPlatform, onSelectPlatform }: Props) => {
-  const { data, error } = usePlatforms();
-
-  if (error) return null;
+  const { data } = usePlatforms();
 
   return (
     // Dropdown Menu
